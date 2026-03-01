@@ -17,7 +17,6 @@
   --dark-brown: #3d2817;
   --light-tan: #f5f1eb;
   --white: #ffffff;
-  --soft-yellow: #fff4c2;
 }
 
 body {
@@ -701,9 +700,13 @@ body {
 
 
 
-
+:root {
+  --white: #ffffff;
+  --light-tan: #f5e4b8;
+  --dark-brown: #4a3f2b;
+  --sage-green: #0724a1; /* your accent blue */
   
-
+}
 /* ===== Categories Filter ===== */
 .categories-filter {
   background: var(--white);
@@ -866,8 +869,9 @@ body {
 
 /* FIXED — Proper flex grid, centered, responsive */
 .featured-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 /* Product Card */
@@ -1476,7 +1480,9 @@ body {
     grid-template-columns: 1fr;
   }
 
-  
+  .featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   .blog-text h2 {
     font-size: 1.3rem;
